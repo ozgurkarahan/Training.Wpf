@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:userControl="clr-namespace:Training.Wpf.UserControls">
+
+
+    <DataTemplate DataType="{x:Type userControl:PersonModel}">
+        <userControl:Person/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type userControl:CarnetAdresseViewModel}">
+        <userControl:CarnetAdresse/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type userControl:GridAddressViewModel}">
+        <userControl:GridAddress/>
+    </DataTemplate>
+    
+    <Style x:Key="baseControlStyle">
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True">
+                        <AdornedElementPlaceholder Name="customAdorner" VerticalAlignment="Center" >
+                            <Border BorderBrush="Red" BorderThickness="1" />
+                        </AdornedElementPlaceholder>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="Control.ToolTip"
+                        Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource baseControlStyle}" TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="5,5,5,5" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <!--<Setter Property="Background" Value="Red"/>-->
+    </Style>
+
+    <Style BasedOn="{StaticResource baseControlStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin" Value="5,5,5,5" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <!--<Setter Property="Background" Value="Blue"/> -->
+    </Style>
+</ResourceDictionary>
