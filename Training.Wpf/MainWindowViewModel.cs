@@ -15,13 +15,26 @@ namespace Training.Wpf
 
         public MainWindowViewModel()
         {
-            this.Context = new Context();
-            var tmpCar = new CarnetAdresseViewModel(this.Context);
-            Ecrans.Add(tmpCar);
-            var tmpGrid = new GridAddressViewModel(this.Context);
-            Ecrans.Add(tmpGrid);
+            Initialize();           
+        }
+
+        private void Initialize() 
+        {
+            InitializeNavigationViewModels();
             EcranPreviousCommand = new RelayCommand(p => EcranPrevious(), p => CanEcranPrevious());
             EcranNextCommand = new RelayCommand(p => EcranNext(), p => CanEcranNext());
+        }
+
+        private void InitializeNavigationViewModels() 
+        {
+            this.Context = new Context();
+            var tmpAdd = new AddContactViewModel(this.Context);            
+            var tmpCar = new CarnetAdresseViewModel(this.Context);
+            var tmpGrid = new GridAddressViewModel(this.Context);
+
+            Ecrans.Add(tmpAdd);
+            Ecrans.Add(tmpCar);
+            Ecrans.Add(tmpGrid);
         }
 
         private ObservableCollection<NavigationViewModel> _ecrans;

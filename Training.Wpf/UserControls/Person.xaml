@@ -20,8 +20,10 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock  Grid.Row="0" Grid.Column="0" Text="{Binding Path=TitlesLabel}"/>
-        <ComboBox Grid.Row="0" Grid.Column="1" ItemsSource="{Binding Path=Titles}" SelectedItem="{Binding Path=SelectedTitle,ValidatesOnDataErrors=True}"/>
+        <TextBlock  Grid.Row="0" Grid.Column="0" Margin="5"
+                    Text="{Binding Path=TitlesLabel}"/>
+        <ComboBox Grid.Row="0" Grid.Column="1" Margin="5"
+                  ItemsSource="{Binding Path=Titles}" SelectedItem="{Binding Path=SelectedTitle,ValidatesOnDataErrors=True}"/>
         
         <TextBlock  Grid.Row="1" Grid.Column="0" Text="{Binding Path=NameLabel}"/>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=Name, ValidatesOnDataErrors=True}"/>

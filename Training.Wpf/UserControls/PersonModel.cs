@@ -13,7 +13,16 @@ namespace Training.Wpf.UserControls
         public PersonModel()
         {
             Initialize();
-
+        }
+        
+        public bool IsValid()
+        {
+            foreach (var item in ValidationRules)
+            {
+                if (item.Value.Invoke() != null)
+                    return false;
+            }
+            return true;
         }
 
         private void Initialize()
@@ -25,9 +34,10 @@ namespace Training.Wpf.UserControls
             _titlesLabel = Properties.Resources.LabelTitle;
             RegisterRule("Name", ValidateName);
             RegisterRule("SelectedTitle", ValidateSelectedTitle);
-
         }
 
+        #region Binded Properties
+        
         private string _nameLabel;
         public string NameLabel
         {
@@ -104,6 +114,7 @@ namespace Training.Wpf.UserControls
         {
             return string.IsNullOrWhiteSpace(SelectedTitle) ? Properties.Resources.ErrMsgSelectedTitle : null;
         }
-
+        
+        #endregion
     }
 }

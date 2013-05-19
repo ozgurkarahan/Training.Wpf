@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:userControl="clr-namespace:Training.Wpf.UserControls"
+             xmlns:properties="clr-namespace:Training.Wpf.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -17,16 +18,11 @@
             <RowDefinition Height="30"></RowDefinition>
         </Grid.RowDefinitions>
 
-
-        <ItemsControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Persons}">
-            <!--<ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <userControl:Person/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>-->
-        </ItemsControl>
-
-        <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"  Content="Ajouter" Command="{Binding AddCommand}"/>
-        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"  Content="Supprimer" Command="{Binding DelCommand}"/>
+        <ItemsControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Persons}"/>
+       
+        <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"  
+                Content="{x:Static properties:Resources.AddButton}" Command="{Binding AddCommand}"/>
+        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"  
+                Content="{x:Static properties:Resources.DelButton}" Command="{Binding DelCommand}"/>
     </Grid>
 </UserControl>

@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="Commun\ContextTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="UserControls\CarnetAdresseViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
