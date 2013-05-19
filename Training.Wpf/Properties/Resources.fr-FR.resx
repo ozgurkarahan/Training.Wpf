@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddButton" xml:space="preserve">
-    <value>Ajouter une nouvelle contact</value>
+    <value>Ajouter un nouveau contact</value>
   </data>
   <data name="DelButton" xml:space="preserve">
-    <value>Supprimer la derniére contact</value>
+    <value>Supprimer le dernier contact</value>
   </data>
   <data name="EcranNameAddContact" xml:space="preserve">
-    <value>Add a new contact</value>
+    <value>Ajouter un nouveau contact</value>
   </data>
   <data name="EcranNameCarnetAdresse" xml:space="preserve">
     <value>Carnet d'adresse</value>
