@@ -27,7 +27,7 @@ namespace Training.Wpf.UserControls
             {
                 return Resources.EcranNameCarnetAdresse;
             }
-           
+
         }
 
         private const int _maxLenght = 10;
@@ -45,7 +45,7 @@ namespace Training.Wpf.UserControls
             set
             {
                 _persons = value;
-                OnPropertyChanged("Persons");
+                RaisePropertyChanged("Persons");
             }
         }
 
@@ -70,12 +70,10 @@ namespace Training.Wpf.UserControls
         {
             return Persons.Count >= 1;
         }
-        
-        public ICommand AddCommand
-        { get; set; }
 
-        public ICommand DelCommand
-        { get; set; }
+        public ICommand AddCommand { get; set; }
+
+        public ICommand DelCommand { get; set; }
 
     }
 }

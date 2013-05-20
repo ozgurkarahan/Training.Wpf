@@ -139,13 +139,13 @@
     <value>Name does not empty !!!</value>
   </data>
   <data name="HeaderColumnGender" xml:space="preserve">
-    <value>Sex</value>
+    <value>Gender</value>
   </data>
   <data name="HeaderColumnName" xml:space="preserve">
-    <value>Prénom</value>
+    <value>Name</value>
   </data>
   <data name="HeaderColumnSurname" xml:space="preserve">
-    <value>Nom</value>
+    <value>Sur Name</value>
   </data>
   <data name="LabelName" xml:space="preserve">
     <value>Name :</value>
@@ -155,6 +155,12 @@
   </data>
   <data name="LabelTitle" xml:space="preserve">
     <value>Title :</value>
+  </data>
+  <data name="NextButton" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="PreviousButton" xml:space="preserve">
+    <value>Previous</value>
   </data>
   <data name="TitleMlle" xml:space="preserve">
     <value>Miss</value>

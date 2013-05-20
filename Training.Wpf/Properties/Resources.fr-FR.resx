@@ -156,6 +156,12 @@
   <data name="LabelTitle" xml:space="preserve">
     <value>Titre :</value>
   </data>
+  <data name="NextButton" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="PreviousButton" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
   <data name="TitleMlle" xml:space="preserve">
     <value>Mademoiselle</value>
   </data>

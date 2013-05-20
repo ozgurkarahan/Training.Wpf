@@ -51,7 +51,7 @@ namespace Training.Wpf.UserControls
             set
             {
                 _name = value;
-                OnPropertyChanged("Name");
+                RaisePropertyChanged("Name");
             }
         }
 
@@ -73,7 +73,7 @@ namespace Training.Wpf.UserControls
             set
             {
                 _surName = value;
-                OnPropertyChanged("SurName");
+                RaisePropertyChanged("SurName");
             }
         }
 
@@ -107,7 +107,7 @@ namespace Training.Wpf.UserControls
             set
             {
                 _selectedTitle = value;
-                OnPropertyChanged("SelectedTitle");
+                RaisePropertyChanged("SelectedTitle");
             }
         }
         private string ValidateSelectedTitle()

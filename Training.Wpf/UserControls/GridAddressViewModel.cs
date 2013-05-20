@@ -8,7 +8,7 @@ using Training.Wpf.Commun;
 
 namespace Training.Wpf.UserControls
 {
-    class GridAddressViewModel : NavigationViewModel
+    public class GridAddressViewModel : NavigationViewModel
     {
         public GridAddressViewModel(IContext context) : base(context)
         {
@@ -38,7 +38,7 @@ namespace Training.Wpf.UserControls
             set
             {
                 _persons = value;
-                OnPropertyChanged("Persons");
+                RaisePropertyChanged("Persons");
             }
         }
 

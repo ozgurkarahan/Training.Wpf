@@ -34,7 +34,7 @@ namespace Training.Wpf.UserControls
             set 
             {
                 _tempContact = value;
-                OnPropertyChanged("TempContact");
+                RaisePropertyChanged("TempContact");
             }
         }
         public ICommand AddCommand { get; set; }

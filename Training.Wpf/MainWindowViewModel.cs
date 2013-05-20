@@ -7,6 +7,7 @@ using Training.Wpf.UserControls;
 using System.Collections.ObjectModel;
 using Training.Wpf.Commun;
 using System.Windows.Input;
+using Training.Wpf.Helper;
 
 namespace Training.Wpf
 {
@@ -25,17 +26,15 @@ namespace Training.Wpf
             EcranNextCommand = new RelayCommand(p => EcranNext(), p => CanEcranNext());
         }
 
-        private void InitializeNavigationViewModels() 
+        private void InitializeNavigationViewModels()
         {
-            this.Context = new Context();
-            var tmpAdd = new AddContactViewModel(this.Context);            
-            var tmpCar = new CarnetAdresseViewModel(this.Context);
-            var tmpGrid = new GridAddressViewModel(this.Context);
-
-            Ecrans.Add(tmpAdd);
-            Ecrans.Add(tmpCar);
-            Ecrans.Add(tmpGrid);
+            foreach (var item in ConfigurationHelper.Container.ResolveAll<NavigationViewModel>())
+            {
+                Ecrans.Add(item);
+            }
         }
+
+        public IContext Context { get; set; }
 
         private ObservableCollection<NavigationViewModel> _ecrans;
         public ObservableCollection<NavigationViewModel> Ecrans
@@ -51,7 +50,7 @@ namespace Training.Wpf
             set
             {
                 _ecrans = value;
-                OnPropertyChanged("Ecrans");
+                RaisePropertyChanged("Ecrans");
             }
         }
 
@@ -62,13 +61,11 @@ namespace Training.Wpf
             set
             {
                 _selectedEcran = value;
-                OnPropertyChanged("SelectedEcran");
+                RaisePropertyChanged("SelectedEcran");
             }
         }
 
-        public IContext Context { get; set; }
-
-        public CarnetAdresseViewModel CarnetAdresse { get; set; }
+        
 
 
         private bool CanEcranPrevious()

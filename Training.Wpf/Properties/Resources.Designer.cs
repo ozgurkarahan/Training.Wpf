@@ -124,7 +124,7 @@ namespace Training.Wpf.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sex.
+        ///   Looks up a localized string similar to Gender.
         /// </summary>
         public static string HeaderColumnGender {
             get {
@@ -133,7 +133,7 @@ namespace Training.Wpf.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Prénom.
+        ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string HeaderColumnName {
             get {
@@ -142,7 +142,7 @@ namespace Training.Wpf.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nom.
+        ///   Looks up a localized string similar to Sur Name.
         /// </summary>
         public static string HeaderColumnSurname {
             get {
@@ -174,6 +174,24 @@ namespace Training.Wpf.Properties {
         public static string LabelTitle {
             get {
                 return ResourceManager.GetString("LabelTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string NextButton {
+            get {
+                return ResourceManager.GetString("NextButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous.
+        /// </summary>
+        public static string PreviousButton {
+            get {
+                return ResourceManager.GetString("PreviousButton", resourceCulture);
             }
         }
         
