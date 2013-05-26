@@ -14,7 +14,6 @@ namespace Training.Wpf.UserControls
         {
             Persons = _context.Persons;
         }
-       
 
         public override string Name
         {

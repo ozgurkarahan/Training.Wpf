@@ -148,6 +148,17 @@ namespace Training.Wpf.Base
             // do nothing
         }
 
+        //Checks if viewmodel is in a valid state
+        public bool IsValid()
+        {
+            foreach (var item in ValidationRules)
+            {
+                if (item.Value.Invoke() != null)
+                    return false;
+            }
+            return true;
+        }
+
         public virtual void ValidateAll()
         {
             RaiseAll();

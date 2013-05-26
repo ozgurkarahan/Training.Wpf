@@ -115,7 +115,7 @@ namespace Training.Wpf.Test.UserControls
             var vm = new CarnetAdresseViewModel(ctx);
             var result = vm.AddCommand.CanExecute(null);
             Assert.IsTrue(result);
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < Settings.Default.maxLengthOfCarnetAdresse; i++)
             {
                 vm.Persons.Add(new PersonModel());
             }
@@ -151,8 +151,7 @@ namespace Training.Wpf.Test.UserControls
                 vm.AddCommand.Execute(null);
             }
 
-            Assert.AreEqual(10, vm.Persons.Count);
-                        
+            Assert.AreEqual(Settings.Default.maxLengthOfCarnetAdresse, vm.Persons.Count);                        
         }
     }
 }

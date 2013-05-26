@@ -14,22 +14,10 @@ namespace Training.Wpf.UserControls
         {
             Initialize();
         }
-        
-        public bool IsValid()
-        {
-            foreach (var item in ValidationRules)
-            {
-                if (item.Value.Invoke() != null)
-                    return false;
-            }
-            return true;
-        }
 
         private void Initialize()
         {
-            //_nameLabel = "Nom :";
             _nameLabel = Properties.Resources.LabelName;
-            //_surNameLabel = "Prénom";
             _surNameLabel = Properties.Resources.LabelSurName;
             _titlesLabel = Properties.Resources.LabelTitle;
             RegisterRule("Name", ValidateName);
@@ -54,8 +42,7 @@ namespace Training.Wpf.UserControls
                 RaisePropertyChanged("Name");
             }
         }
-
-        public string ValidateName()
+        private string ValidateName()
         {
             return string.IsNullOrWhiteSpace(Name) ? Properties.Resources.ErrName : null;
         }

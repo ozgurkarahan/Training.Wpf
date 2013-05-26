@@ -27,9 +27,9 @@ namespace Training.Wpf.UserControls
             {
                 return Resources.EcranNameCarnetAdresse;
             }
-
         }
 
+        [Obsolete("get it from configuration file", true)]
         private const int _maxLenght = 10;
         private ObservableCollection<PersonModel> _persons;
         public ObservableCollection<PersonModel> Persons
@@ -57,7 +57,7 @@ namespace Training.Wpf.UserControls
 
         private bool CanAddPerson()
         {
-            return Persons.Count < _maxLenght;
+            return Persons.Count < Settings.Default.maxLengthOfCarnetAdresse;
         }
 
         private void DeletePerson()

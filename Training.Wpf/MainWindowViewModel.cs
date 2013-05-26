@@ -64,10 +64,7 @@ namespace Training.Wpf
                 RaisePropertyChanged("SelectedEcran");
             }
         }
-
         
-
-
         private bool CanEcranPrevious()
         {
             if (SelectedEcran == null)
