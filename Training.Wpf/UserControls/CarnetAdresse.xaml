@@ -18,8 +18,10 @@
             <RowDefinition Height="30"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ItemsControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Persons}"/>
-       
+        <ScrollViewer Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto">
+            <ItemsControl  ItemsSource="{Binding Path=Persons}"/>
+        </ScrollViewer >
+
         <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"  
                 Content="{x:Static properties:Resources.AddButton}" Command="{Binding AddCommand}"/>
         <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"  

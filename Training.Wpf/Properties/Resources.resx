@@ -138,6 +138,9 @@
   <data name="ErrName" xml:space="preserve">
     <value>Name does not empty !!!</value>
   </data>
+  <data name="ErrNonValidePhoneNumberMessage" xml:space="preserve">
+    <value>Non valid phone number! Use digit without space ex: 00906856785</value>
+  </data>
   <data name="HeaderColumnGender" xml:space="preserve">
     <value>Gender</value>
   </data>
@@ -147,8 +150,14 @@
   <data name="HeaderColumnSurname" xml:space="preserve">
     <value>Sur Name</value>
   </data>
+  <data name="HeaderPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
   <data name="LabelName" xml:space="preserve">
     <value>Name :</value>
+  </data>
+  <data name="LabelPhoneNumber" xml:space="preserve">
+    <value>Phone Number :</value>
   </data>
   <data name="LabelSurName" xml:space="preserve">
     <value>Surname :</value>

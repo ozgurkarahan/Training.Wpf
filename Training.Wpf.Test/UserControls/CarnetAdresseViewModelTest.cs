@@ -142,7 +142,7 @@ namespace Training.Wpf.Test.UserControls
         }
 
         [TestMethod]
-        public void Test_MaxLenght_Person_doit_etre_10()
+        public void Test_MaxLenght_Person()
         {
             var ctx = new Context();
             var vm = new CarnetAdresseViewModel(ctx);

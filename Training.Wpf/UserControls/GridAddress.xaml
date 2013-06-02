@@ -13,9 +13,10 @@
         <DataGrid Grid.Column="0" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False"
                   AutoGenerateColumns="False" ItemsSource="{Binding Persons, Mode=TwoWay}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="{x:Static properties:Resources.HeaderColumnName}" Binding="{Binding Path=Name}"/>
-                <DataGridTextColumn Header="{x:Static properties:Resources.HeaderColumnSurname}" Binding="{Binding Path=SurName}"/>
-                <DataGridTextColumn Header="{x:Static properties:Resources.HeaderColumnGender}" Binding="{Binding Path=SelectedTitle}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.HeaderColumnGender}" IsReadOnly="True" Binding="{Binding Path=SelectedTitle}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.HeaderColumnName}" IsReadOnly="True" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.HeaderColumnSurname}" IsReadOnly="True" Binding="{Binding Path=SurName}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.HeaderPhoneNumber}" IsReadOnly="True" Binding="{Binding Path=PhoneNumber}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

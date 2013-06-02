@@ -22,6 +22,7 @@ namespace Training.Wpf.UserControls
             _titlesLabel = Properties.Resources.LabelTitle;
             RegisterRule("Name", ValidateName);
             RegisterRule("SelectedTitle", ValidateSelectedTitle);
+            RegisterRule("PhoneNumber", ValidatePhoneNumber);
         }
 
         #region Binded Properties
@@ -62,6 +63,24 @@ namespace Training.Wpf.UserControls
                 _surName = value;
                 RaisePropertyChanged("SurName");
             }
+        }
+
+        private string _phoneNumber;
+        public string PhoneNumber
+        {
+            get { return _phoneNumber; }
+            set
+            {
+                _phoneNumber = value;
+                RaisePropertyChanged("PhoneNumber");
+            }
+        }
+        private string ValidatePhoneNumber()
+        {
+            double number;
+            if (!Double.TryParse((PhoneNumber as string), out number))
+                return Properties.Resources.ErrNonValidePhoneNumberMessage;
+            return null;
         }
 
         private string _titlesLabel;

@@ -124,6 +124,15 @@ namespace Training.Wpf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Non valid phone number! Use digit without space ex: 00906856785.
+        /// </summary>
+        public static string ErrNonValidePhoneNumberMessage {
+            get {
+                return ResourceManager.GetString("ErrNonValidePhoneNumberMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gender.
         /// </summary>
         public static string HeaderColumnGender {
@@ -151,11 +160,29 @@ namespace Training.Wpf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Phone Number.
+        /// </summary>
+        public static string HeaderPhoneNumber {
+            get {
+                return ResourceManager.GetString("HeaderPhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name :.
         /// </summary>
         public static string LabelName {
             get {
                 return ResourceManager.GetString("LabelName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number :.
+        /// </summary>
+        public static string LabelPhoneNumber {
+            get {
+                return ResourceManager.GetString("LabelPhoneNumber", resourceCulture);
             }
         }
         
