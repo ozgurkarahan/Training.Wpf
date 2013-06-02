@@ -5,14 +5,4 @@ This is one of the example, I created while teaching fundementals of C#, OOP, MV
 
 This training wpf mvvm application contains basic functinalities of a WPF application :
 
-Dependency Injection
-
-Binding, 
-
-Style, 
-
-
-Validation, 
-
-
-DataTemplate
+Dependency Injection, Binding, Style, Validation, DataTemplate
